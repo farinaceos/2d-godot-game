@@ -1,0 +1,6 @@
+res://scenes/player.tscn
+res://script/player.gd
+res://scenes/survivors_game.tscn
+res://scenes/pine_tree.tscn
+res://scenes/mob.tscn
+res://script/mob.gd
