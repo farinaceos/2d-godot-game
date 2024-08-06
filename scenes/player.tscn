@@ -1,13 +1,31 @@
-[gd_scene load_steps=4 format=3 uid="uid://bassyoirydih5"]
+[gd_scene load_steps=8 format=3 uid="uid://bassyoirydih5"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_8xx3d"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_63f6b"]
+[ext_resource type="PackedScene" uid="uid://ctdwhg65bed0x" path="res://scenes/gun.tscn" id="3_xr70q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo7ag"]
 radius = 31.257
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwiwl"]
+radius = 46.0435
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dtybv"]
+bg_color = Color(0.152941, 0.168627, 0.188235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7x51"]
+bg_color = Color(0.388235, 0.8, 0.372549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Player" type="CharacterBody2D"]
-position = Vector2(108, 120)
+position = Vector2(0, -3)
 script = ExtResource("1_8xx3d")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_63f6b")]
@@ -17,3 +35,31 @@ position = Vector2(2, 42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 33)
 shape = SubResource("CircleShape2D_xo7ag")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 30)
+limit_smoothed = true
+
+[node name="Gun" parent="." instance=ExtResource("3_xr70q")]
+position = Vector2(-1, 23)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(1, -9)
+shape = SubResource("CircleShape2D_dwiwl")
+debug_color = Color(0.753389, 0.42681, 0.447888, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -72.0
+offset_top = -106.0
+offset_right = 72.0
+offset_bottom = -79.0
+theme_override_styles/background = SubResource("StyleBoxFlat_dtybv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s7x51")
+value = 100.0
+show_percentage = false

@@ -1,6 +1,12 @@
-res://scenes/player.tscn
-res://script/player.gd
-res://scenes/survivors_game.tscn
-res://scenes/pine_tree.tscn
 res://scenes/mob.tscn
 res://script/mob.gd
+res://scenes/pine_tree.tscn
+res://scenes/survivors_game.tscn
+res://scenes/player.tscn
+res://scenes/gun.tscn
+res://script/gun.gd
+res://scenes/bullet.tscn
+res://script/bullet.gd
+res://characters/slime/slime.tscn
+res://script/player.gd
+res://script/survivors_game.gd
