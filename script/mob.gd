@@ -27,8 +27,5 @@ func take_damage():
 		smoke.global_position = global_position
 		
 
-
 func _on_slime_tree_exited():
 	GameManager.score += 1
-	#if GameManager.score > GameManager.highScore:
-	#	GameManager.highScore = GameManager.score

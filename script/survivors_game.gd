@@ -8,15 +8,15 @@ func spawn_mob():
 @onready var player = $Player
 
 # TRY TO SPAWN TREES LATER
-#func spawn_tree():
-	#var new_tree = preload("res://scenes/pine_tree.tscn")
-	#%PathFollow2D.progress_ratio = randf()
-	#new_tree.global_position = %PathFollow2D.global_position
-	#add_child(new_tree)
+func spawn_tree():
+	var new_tree = preload("res://scenes/pine_tree.tscn").instantiate()
+	%TreePathFollow2D.progress_ratio = randf()
+	new_tree.global_position = %TreePathFollow2D.global_position
+	add_child(new_tree)
 
 func _on_timer_timeout():
 	spawn_mob()
-	#spawn_tree()
+	spawn_tree()
 	
 func _on_player_health_depleted():
 	%GameOver.visible = true
