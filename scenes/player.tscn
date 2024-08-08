@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bassyoirydih5"]
+[gd_scene load_steps=9 format=3 uid="uid://bassyoirydih5"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_8xx3d"]
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_63f6b"]
+[ext_resource type="Script" path="res://script/Score.gd" id="3_dcnou"]
 [ext_resource type="PackedScene" uid="uid://ctdwhg65bed0x" path="res://scenes/gun.tscn" id="3_xr70q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xo7ag"]
@@ -27,6 +28,7 @@ corner_radius_bottom_left = 8
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(0, -3)
 script = ExtResource("1_8xx3d")
+metadata/_edit_vertical_guides_ = [-976.0]
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_63f6b")]
 unique_name_in_owner = true
@@ -40,8 +42,18 @@ shape = SubResource("CircleShape2D_xo7ag")
 position = Vector2(1, 30)
 limit_smoothed = true
 
+[node name="Score" type="Label" parent="Camera2D"]
+unique_name_in_owner = true
+offset_left = -927.0
+offset_top = -523.0
+offset_right = -567.0
+offset_bottom = -421.0
+theme_override_font_sizes/font_size = 56
+text = "% Points"
+script = ExtResource("3_dcnou")
+
 [node name="Gun" parent="." instance=ExtResource("3_xr70q")]
-position = Vector2(-1, 23)
+position = Vector2(1, -3)
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true

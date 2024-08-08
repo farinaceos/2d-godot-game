@@ -1,4 +1,6 @@
+Button
 Label
+Node
 ColorRect
 CanvasLayer
 Timer
@@ -11,5 +13,3 @@ Marker2D
 Camera2D
 CharacterBody2D
 Node2D
-StaticBody2D
-Node

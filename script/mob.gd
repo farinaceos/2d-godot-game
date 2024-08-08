@@ -19,9 +19,16 @@ func take_damage():
 	health -= 1
 	%Slime.play_hurt()
 	if health == 0:
+		
 		queue_free()
 		const SMOKE_EXPLOSION = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_EXPLOSION.instantiate()
 		get_parent().add_child(smoke)
 		smoke.global_position = global_position
 		
+
+
+func _on_slime_tree_exited():
+	GameManager.score += 1
+	#if GameManager.score > GameManager.highScore:
+	#	GameManager.highScore = GameManager.score

@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvsmfh3ggshgt"]
+[gd_scene load_steps=8 format=3 uid="uid://bvsmfh3ggshgt"]
 
 [ext_resource type="Script" path="res://script/survivors_game.gd" id="1_71jad"]
 [ext_resource type="PackedScene" uid="uid://bassyoirydih5" path="res://scenes/player.tscn" id="1_n34gq"]
 [ext_resource type="PackedScene" uid="uid://cew6hbvnf21t1" path="res://scenes/pine_tree.tscn" id="2_isqkl"]
+[ext_resource type="Script" path="res://scenes/Game Manager.gd" id="4_a4roh"]
+[ext_resource type="Script" path="res://script/EndScore.gd" id="4_bl8dl"]
+[ext_resource type="Script" path="res://script/HighScore.gd" id="5_nfmxj"]
 
 [sub_resource type="Curve2D" id="Curve2D_n3hbh"]
 _data = {
@@ -13,6 +16,9 @@ point_count = 5
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_71jad")
+
+[node name="Game Manager" type="Node" parent="."]
+script = ExtResource("4_a4roh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -3
@@ -65,6 +71,7 @@ autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+process_mode = 3
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameOver"]
@@ -78,21 +85,84 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.0117647, 0.0117647, 0.0117647, 0.6)
 
-[node name="Label" type="Label" parent="GameOver/ColorRect"]
+[node name="GameOverText" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.372
+anchor_right = 0.5
+anchor_bottom = 0.372
+offset_left = -443.0
+offset_top = -101.968
+offset_right = 417.0
+offset_bottom = 103.032
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 150
+text = "GAME OVER"
+
+[node name="EndScore" type="Label" parent="GameOver/ColorRect"]
+light_mask = 0
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -34.5
-offset_right = 130.0
-offset_bottom = 34.5
+offset_left = -733.0
+offset_top = 89.0
+offset_right = -353.0
+offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 150
-text = "GAME OVER"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 51
+text = "You scored
+%%%
+Points"
+horizontal_alignment = 1
+script = ExtResource("4_bl8dl")
+
+[node name="HighScore" type="Label" parent="GameOver/ColorRect"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 470.0
+offset_top = -510.0
+offset_right = 889.0
+offset_bottom = -294.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/font_size = 51
+text = "High Score: %%%"
+horizontal_alignment = 1
+script = ExtResource("5_nfmxj")
+
+[node name="Button" type="Button" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.678
+anchor_right = 0.5
+anchor_bottom = 0.678
+offset_left = -163.0
+offset_top = -51.7321
+offset_right = 163.0
+offset_bottom = 67.2679
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 81
+text = "RELOAD"
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="GameOver/ColorRect/Button" to="." method="_on_button_pressed"]
