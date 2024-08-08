@@ -1,10 +1,8 @@
-res://scenes/player.tscn
 res://scenes/survivors_game.tscn
-res://scenes/Game Manager.gd
-res://script/Score.gd
-res://script/mob.gd
+res://scenes/player.tscn
 res://scenes/mob.tscn
-res://script/survivors_game.gd
-res://script/EndScore.gd
-res://script/HighScore.gd
+res://characters/happy_boo/happy_boo.tscn
+res://characters/slime/slime.tscn
 res://script/player.gd
+res://scenes/bullet.tscn
+res://script/bullet.gd
