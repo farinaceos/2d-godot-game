@@ -1,8 +1,8 @@
+res://script/Menu.gd
+res://scenes/menu.tscn
 res://scenes/survivors_game.tscn
 res://scenes/player.tscn
 res://scenes/mob.tscn
-res://characters/happy_boo/happy_boo.tscn
-res://characters/slime/slime.tscn
-res://script/player.gd
-res://scenes/bullet.tscn
-res://script/bullet.gd
+res://script/survivors_game.gd
+res://pistol/muzzle_flash/muzzle_flash.tscn
+res://scenes/theme.tscn

@@ -1,7 +1,10 @@
+Label
+AudioStreamPlayer
+Button
+VBoxContainer
+Control
 PathFollow2D
 Path2D
-Button
-Label
 Node
 ColorRect
 CanvasLayer
@@ -9,6 +12,3 @@ Timer
 ProgressBar
 CollisionShape2D
 Area2D
-Marker2D
-Camera2D
-CharacterBody2D
