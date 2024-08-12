@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-var health = 4
-var drop_rate = 0.5
+var health = 3
+var drop_rate = 0.8
 const SPEED = 300.0
 
 # onready function is the same as calling the _ready() function
@@ -15,6 +15,8 @@ func _physics_process(delta):
 	velocity = direction * SPEED
 	move_and_slide()
 
+func improve():
+	health =+1
 
 func take_damage():
 	health -= 1

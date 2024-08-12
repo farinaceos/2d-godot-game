@@ -79,8 +79,7 @@ position = Vector2(783, 106)
 [node name="PineTree7" parent="." instance=ExtResource("2_isqkl")]
 position = Vector2(1142, 496)
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.458
+[node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 
 [node name="GameOver" type="CanvasLayer" parent="."]
@@ -190,7 +189,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 61
 text = "Quit"
 
+[node name="DifTimer" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true
+
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="GameOver/ColorRect/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="timeout" from="DifTimer" to="." method="_on_dif_timer_timeout"]

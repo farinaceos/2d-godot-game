@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var player = $Player
 
+
 func spawn_mob():
 	var new_mob = preload("res://scenes/mob.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
@@ -33,4 +34,12 @@ func _on_button_pressed():
 	
 func _on_quit_button_pressed():
 	get_tree().quit()
-	
+
+func _on_dif_timer_timeout():
+	print("Difficulty UP!")
+	print($SpawnTimer.wait_time)
+	print($Player/Gun/Timer.wait_time)
+	$SpawnTimer.wait_time -= 0.09
+	$Player/Gun/Timer.wait_time += 0.09
+	print($SpawnTimer.wait_time)
+	print($Player/Gun/Timer.wait_time)

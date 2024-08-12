@@ -1,12 +1,13 @@
-res://scenes/mob.tscn
-res://script/mob.gd
 res://scenes/survivors_game.tscn
 res://scenes/player.tscn
+res://scenes/mob.tscn
 res://scenes/menu.tscn
-res://script/player.gd
-res://script/potion.gd
 res://scenes/potion.tscn
 res://characters/slime/slime.tscn
-res://characters/slime/slime.gd
-res://script/survivors_game.gd
 res://scenes/gun.tscn
+res://script/gun.gd
+res://scenes/theme.tscn
+res://script/mob.gd
+res://script/potion.gd
+res://scenes/Game Manager.gd
+res://script/survivors_game.gd
