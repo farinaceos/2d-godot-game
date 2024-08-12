@@ -1,11 +1,12 @@
 extends CharacterBody2D
 
 var health = 4
-
+var drop_rate = 0.5
 const SPEED = 300.0
 
 # onready function is the same as calling the _ready() function
 @onready var player = $"../Player"
+const POTION = preload("res://scenes/potion.tscn")
 
 func _ready(): %Slime.play_walk()
 
@@ -29,3 +30,13 @@ func take_damage():
 
 func _on_slime_tree_exited():
 	GameManager.score += 1
+	var drop_chance = randf()
+	
+	if drop_chance > drop_rate:		
+		var new_potion = POTION.instantiate()
+		new_potion.global_position = $Slime/Anchor/Face/SlimeFace.global_position
+		player.get_parent().add_child(new_potion)
+		
+	#var drop_percent = randf()
+	#if drop_percent > drop_rate:
+		

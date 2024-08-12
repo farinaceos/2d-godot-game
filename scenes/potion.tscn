@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cil2dkwc2tbvh"]
+
+[ext_resource type="Script" path="res://script/potion.gd" id="1_61ois"]
+[ext_resource type="Texture2D" uid="uid://brgpjilf7s2ul" path="res://pistol/muzzle_flash/muzzle_flash.png" id="1_vu247"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tslof"]
+size = Vector2(73, 117)
+
+[node name="Potion" type="Area2D"]
+collision_priority = 5.0
+script = ExtResource("1_61ois")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.56477
+scale = Vector2(3.69724, 2.5667)
+texture = ExtResource("1_vu247")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_tslof")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

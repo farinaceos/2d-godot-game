@@ -27,6 +27,7 @@ corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(0, -3)
+collision_layer = 5
 script = ExtResource("1_8xx3d")
 metadata/_edit_vertical_guides_ = [-976.0]
 

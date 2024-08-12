@@ -1,13 +1,14 @@
 extends Node2D
 
+@onready var player = $Player
+
 func spawn_mob():
 	var new_mob = preload("res://scenes/mob.tscn").instantiate()
 	%PathFollow2D.progress_ratio = randf()
 	new_mob.global_position = %PathFollow2D.global_position
 	add_child(new_mob)
-@onready var player = $Player
+	
 
-# TRY TO SPAWN TREES LATER
 func spawn_tree():
 	var new_tree = preload("res://scenes/pine_tree.tscn").instantiate()
 	%TreePathFollow2D.progress_ratio = randf()
@@ -32,3 +33,4 @@ func _on_button_pressed():
 	
 func _on_quit_button_pressed():
 	get_tree().quit()
+	
