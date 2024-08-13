@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
+
+
 var health = 3
 var drop_rate = 0.8
 const SPEED = 300.0
 
 # onready function is the same as calling the _ready() function
 @onready var player = $"../Player"
+@onready var GM = $"/root/GameManager"
+
+
 const POTION = preload("res://scenes/potion.tscn")
 
 func _ready(): %Slime.play_walk()
@@ -14,9 +19,6 @@ func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * SPEED
 	move_and_slide()
-
-func improve():
-	health =+1
 
 func take_damage():
 	health -= 1

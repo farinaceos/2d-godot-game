@@ -1,10 +1,1 @@
 res://scenes/survivors_game.tscn
-res://script/gun.gd
-res://scenes/player.tscn
-res://scenes/mob.tscn
-res://scenes/menu.tscn
-res://scenes/potion.tscn
-res://characters/slime/slime.tscn
-res://scenes/gun.tscn
-res://scenes/theme.tscn
-res://script/bullet.gd

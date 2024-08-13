@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1723549931
+::res://::1723581730
 Blob_logo.png::CompressedTexture2D::9161321287333359489::1723231047::1723231071::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1722886182::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1723233058::0::1::::<><>::
 icon.png::CompressedTexture2D::621515402784007901::1722886182::1722886209::1::::<><>::
-README.md::TextFile::-1::1723549867::0::1::::<><>::
+README.md::TextFile::-1::1723581587::0::1::::<><>::
 ::res://addons/::1722886182
 ::res://addons/colorpicker_presets/::1722886182
 colorpicker_presets.gd::GDScript::-1::1722886182::0::1::::<>EditorPlugin<>::
@@ -22,9 +22,9 @@ square_lower_leg.png::CompressedTexture2D::7651536677184113460::1722886182::1722
 square_modification_stack.tres::SkeletonModificationStack2D::8504717324922621560::1722886182::0::1::::<><>::
 square_ref.png::CompressedTexture2D::4290601870950781964::1722886182::1722886209::1::::<><>::
 square_upper_leg.png::CompressedTexture2D::1148792968243506332::1722886182::1722886209::1::::<><>::
-::res://characters/slime/::1723488703
+::res://characters/slime/::1723580839
 slime.gd::GDScript::-1::1723481112::0::1::::<>Node2D<>::
-slime.tscn::PackedScene::995535223809565591::1723488703::0::1::::<><>::uid://dvgfmy6vtvjji::::res://characters/slime/slime_body.png<>res://characters/slime/slime.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://c078jrp2yvc4s::::res://characters/slime/slime_face.png<>uid://btbxea1f3vwot::::res://characters/slime/slime_body_hurt.png<>uid://cai2ijnbypqtr::::res://characters/slime/slime_hurt_eyes.png
+slime.tscn::PackedScene::995535223809565591::1723580839::0::1::::<><>::uid://dvgfmy6vtvjji::::res://characters/slime/slime_body.png<>res://characters/slime/slime.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://c078jrp2yvc4s::::res://characters/slime/slime_face.png<>uid://btbxea1f3vwot::::res://characters/slime/slime_body_hurt.png<>uid://cai2ijnbypqtr::::res://characters/slime/slime_hurt_eyes.png
 slime_body.png::CompressedTexture2D::8645940357922743702::1722886182::1722886209::1::::<><>::
 slime_body_hurt.png::CompressedTexture2D::3723476765009385039::1722886182::1722886209::1::::<><>::
 slime_face.png::CompressedTexture2D::6595643196702037820::1722886182::1722886209::1::::<><>::
@@ -45,29 +45,29 @@ empty.png::CompressedTexture2D::4561003860277381966::1723549867::1723549867::1::
 poção vermelha bem vazia.png::CompressedTexture2D::7126622619558990483::1723549867::1723549867::1::::<><>::
 poção vermelha meio vazia.png::CompressedTexture2D::7510489800064123677::1723549867::1723549867::1::::<><>::
 poção vermelha.png::CompressedTexture2D::8818037537822173776::1723549867::1723549867::1::::<><>::
-::res://scenes/::1723549867
+::res://scenes/::1723580839
 bullet.tscn::PackedScene::491064340588644054::1723137213::0::1::::<><>::res://script/bullet.gd<>uid://dftkbqwsfd68r::::res://pistol/projectile.png
-Game Manager.gd::GDScript::-1::1723549867::0::1::::<>Node<>::
-gun.tscn::PackedScene::6113971168562791589::1723549867::0::1::::<><>::uid://cswb5do8rrj7q::::res://pistol/pistol.png<>res://script/gun.gd
-menu.tscn::PackedScene::7416840105234569158::1723549867::0::1::::<><>::res://script/Menu.gd<>uid://d3r2vgk8eow38::::res://Blob_logo.png
-mob.tscn::PackedScene::8863151666359405910::1723488703::0::1::::<><>::uid://ogik4s70pgwl::::res://characters/slime/slime.tscn<>res://script/mob.gd
+Game Manager.gd::GDScript::-1::1723569603::0::1::::<>Node<>::
+gun.tscn::PackedScene::6113971168562791589::1723580839::0::1::::<><>::uid://cswb5do8rrj7q::::res://pistol/pistol.png<>res://script/gun.gd
+menu.tscn::PackedScene::7416840105234569158::1723580839::0::1::::<><>::res://script/Menu.gd<>uid://d3r2vgk8eow38::::res://Blob_logo.png
+mob.tscn::PackedScene::8863151666359405910::1723580839::0::1::::<><>::uid://ogik4s70pgwl::::res://characters/slime/slime.tscn<>res://script/mob.gd
 pine_tree.tscn::PackedScene::5100907865423418384::1722961921::0::1::::<><>::uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://caqfk2xng5v5u::::res://trees/pine_tree.png
-player.tscn::PackedScene::2424715996679629924::1723488739::0::1::::<><>::res://script/player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>res://script/Score.gd<>uid://ctdwhg65bed0x::::res://scenes/gun.tscn
-potion.tscn::PackedScene::5358705547318427101::1723549867::0::1::::<><>::res://script/potion.gd<>uid://dxvr14e45fx3u::::res://Red potions/poção vermelha.png
-survivors_game.tscn::PackedScene::3898283143746900139::1723549867::0::1::::<><>::res://script/survivors_game.gd<>uid://bassyoirydih5::::res://scenes/player.tscn<>uid://cew6hbvnf21t1::::res://scenes/pine_tree.tscn<>res://scenes/Game Manager.gd<>res://script/EndScore.gd<>res://script/HighScore.gd
-theme.tscn::PackedScene::4351599833674992078::1723233368::0::1::::<><>::uid://bpu7dlo68dudv::::res://sfx/neon-gaming-128925.mp3
-::res://script/::1723549868
-bullet.gd::GDScript::-1::1723137213::0::1::::<>Area2D<>::
+player.tscn::PackedScene::2424715996679629924::1723580839::0::1::::<><>::res://script/player.gd<>uid://pbmyh1qru7p::::res://characters/happy_boo/happy_boo.tscn<>res://script/Score.gd<>uid://ctdwhg65bed0x::::res://scenes/gun.tscn
+potion.tscn::PackedScene::5358705547318427101::1723580839::0::1::::<><>::res://script/potion.gd<>uid://dxvr14e45fx3u::::res://Red potions/poção vermelha.png
+survivors_game.tscn::PackedScene::3898283143746900139::1723580839::0::1::::<><>::res://script/survivors_game.gd<>uid://bassyoirydih5::::res://scenes/player.tscn<>uid://cew6hbvnf21t1::::res://scenes/pine_tree.tscn<>res://scenes/Game Manager.gd<>res://script/EndScore.gd<>res://script/HighScore.gd
+theme.tscn::PackedScene::4351599833674992078::1723580839::0::1::::<><>::uid://bpu7dlo68dudv::::res://sfx/neon-gaming-128925.mp3
+::res://script/::1723580821
+bullet.gd::GDScript::-1::1723550411::0::1::::<>Area2D<>::
 EndScore.gd::GDScript::-1::1723136776::0::1::::<>Label<>::
 game_manager.gd::GDScript::-1::1723033456::0::1::::<>Node<>::
-gun.gd::GDScript::-1::1723549867::0::1::::<>Area2D<>::
+gun.gd::GDScript::-1::1723550246::0::1::::<>Area2D<>::
 HighScore.gd::GDScript::-1::1723136776::0::1::::<>Label<>::
 Menu.gd::GDScript::-1::1723231419::0::1::::<>Control<>::
-mob.gd::GDScript::-1::1723549867::0::1::::<>CharacterBody2D<>::
+mob.gd::GDScript::-1::1723580821::0::1::::<>CharacterBody2D<>::
 player.gd::GDScript::-1::1723488693::0::1::::<>CharacterBody2D<>::
 potion.gd::GDScript::-1::1723549868::0::1::::<>Area2D<>::
 Score.gd::GDScript::-1::1723136776::0::1::::<>Label<>::
-survivors_game.gd::GDScript::-1::1723549868::0::1::::<>Node2D<>::
+survivors_game.gd::GDScript::-1::1723572431::0::1::::<>Node2D<>::
 ::res://sfx/::1723232182
 neon-gaming-128925.mp3::AudioStreamMP3::3482489795331875667::1723232136::1723232182::1::::<><>::
 ::res://smoke_explosion/::1722886209

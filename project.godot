@@ -74,11 +74,13 @@ Settings/Show_Tooltips=true
 
 [application]
 
-config/name="Your First 2D Game With Godot 4: START (GDQuest)"
+config/name="Blob Survivors"
+config/tags=PackedStringArray("2d", "survivor", "tutorial")
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/image="res://Blob_logo.png"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
