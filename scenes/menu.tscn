@@ -47,20 +47,36 @@ text = "Quit"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 709.0
-offset_top = 755.0
-offset_right = 1891.0
-offset_bottom = 1049.0
+offset_left = 1412.0
+offset_top = 748.0
+offset_right = 1888.0
+offset_bottom = 1075.0
 theme_override_font_sizes/font_size = 21
-text = "Thank you for playing this game
+text = "Credits:
 
-All of its assets are free to download from it's original font, GDScript Youtube Channel
+Development - Farinaceos
+Colaboration - Yol
 
-Blob Survivors the result of my first experience with game dev and I'm trying my best to create a game like experience.
+Every asset used is free and credits can be found in the ReadMe file, 
 
-Hope you Have fun!
+This is my first game, hope you have some fun!"
+horizontal_alignment = 2
+autowrap_mode = 2
 
-                                                                                                                                                                                                                                  M.F."
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 671.0
+offset_top = 49.0
+offset_right = 1301.0
+offset_bottom = 343.0
+theme_override_font_sizes/font_size = 21
+text = "Use W A S D or the keyboard arrows to move
+
+The gun will shoot on its own on the blob that's closer, use the potions to recover life and increase max health
+
+Every 30 seconds the game will become a bit harder"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0

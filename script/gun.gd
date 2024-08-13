@@ -27,8 +27,12 @@ func shoot():
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = %ShootingPoint.global_position
 	new_bullet.global_rotation = %ShootingPoint.global_rotation
-
 	%ShootingPoint.add_child(new_bullet)
+	const MUZZLE_FLASH = preload("res://pistol/muzzle_flash/muzzle_flash.tscn")
+	var bang = MUZZLE_FLASH.instantiate()
+	new_bullet.get_parent().add_child(bang)
+	bang.global_position = %ShootingPoint.global_position
+	bang.global_rotation = %ShootingPoint.global_rotation
 	
 
 func _on_timer_timeout():
